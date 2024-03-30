@@ -60,45 +60,50 @@ class Agenda(Relatorio, Informacoes):
         Label(self.Cadastro, text="Cidade: ", bg="DodgerBlue", fg="indigo").place(relx=0.18, rely=0.53)
         self.cidade = StringVar(self.Cadastro)
         self.cidade.set("CIDADE")
-        self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, "                                                ")
-        self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
-
-        if self.estado == "Minas Gerais":
+        
+        if self.estado.get() == "Minas Gerais":
             self.Cidades_MG()
             self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
             self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        else:
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, "")
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
 
-        Label(self.Cadastro, text="Cidade: ", bg="DodgerBlue", fg="indigo").place(relx=0.18, rely=0.53)
-        self.cidade1 = StringVar(self.Cadastro)
+        Label(self.Alteração, text="Cidade: ", bg="DodgerBlue", fg="indigo").place(relx=0.18, rely=0.53)
+        self.cidade1 = StringVar(self.Alteração)
         self.cidade1.set("CIDADE")
-        self.Cidade1_entry = OptionMenu(self.Cadastro, self.cidade1, "                                           ")
-        self.Cidade1_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        
 
-        if self.estado1 == "Minas Gerais":
+        if self.estado1.get() == "Minas Gerais":
             self.Cidades_MG()
             self.Cidade1_entry = OptionMenu(self.Alteração, self.cidade1, *self.cidades)
             self.Cidade1_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
-        
-        Label(self.Cadastro, text="Cidade: ", bg="DodgerBlue", fg="indigo").place(relx=0.18, rely=0.53)
-        self.cidade2 = StringVar(self.Cadastro)
+        else:
+            self.Cidade1_entry = OptionMenu(self.Alteração, self.cidade1, "                                           ")
+            self.Cidade1_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+            
+        Label(self.Busca, text="Cidade: ", bg="DodgerBlue", fg="indigo").place(relx=0.18, rely=0.53)
+        self.cidade2 = StringVar(self.Busca)
         self.cidade2.set("CIDADE")
-        self.Cidade2_entry = OptionMenu(self.Cadastro, self.cidade2, "                                            ")
-        self.Cidade2_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
 
-        if self.estado2 == "Minas Gerais":
+        if self.estado2.get() == "Minas Gerais":
             self.Cidades_MG()
             self.Cidade2_entry = OptionMenu(self.Busca, self.cidade2, *self.cidades)
+            self.Cidade2_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        else:
+            self.Cidade2_entry = OptionMenu(self.Busca, self.cidade2, "                                            ")
             self.Cidade2_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
 
         Label(self.Exclusão, text="Cidade: ", bg="DodgerBlue", fg="indigo").place(relx=0.18, rely=0.53)
         self.cidade3 = StringVar(self.Exclusão)
         self.cidade3.set("CIDADE")
-        self.Cidade3_entry = OptionMenu(self.Exclusão, self.cidade3, "                                             ")
-        self.Cidade3_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
         
-        if self.estado3 == "Minas Gerais":
+        if self.estado3.get() == "Minas Gerais":
             self.Cidades_MG()
             self.Cidade3_entry = OptionMenu(self.Exclusão, self.cidade3, *self.cidades)
+            self.Cidade3_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        else:
+            self.Cidade3_entry = OptionMenu(self.Exclusão, self.cidade3, "                                             ")
             self.Cidade3_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
 
     def informacoes (self):
@@ -289,20 +294,36 @@ class Agenda(Relatorio, Informacoes):
         self.Apagar.bind("<Enter>", func=lambda e: self.Apagar.config(background="steelblue"))
         self.Apagar.bind("<Leave>", func=lambda e: self.Apagar.config(background="mediumblue"))
 
-        self.Apagar = Button(self.Alteração, text="Limpar", command=self.limpa1_tela, fg="white", bd=1, bg="mediumblue", highlightbackground="royalblue", highlightthickness=5, font=('verdanda', 10, 'bold'))
-        self.Apagar.place(relx=0.83, rely=0.85, relwidth=0.10, relheight=0.1)
-        self.Apagar.bind("<Enter>", func=lambda e: self.Apagar.config(background="steelblue"))
-        self.Apagar.bind("<Leave>", func=lambda e: self.Apagar.config(background="mediumblue"))
+        self.Apagar1 = Button(self.Alteração, text="Limpar", command=self.limpa1_tela, fg="white", bd=1, bg="mediumblue", highlightbackground="royalblue", highlightthickness=5, font=('verdanda', 10, 'bold'))
+        self.Apagar1.place(relx=0.83, rely=0.85, relwidth=0.10, relheight=0.1)
+        self.Apagar1.bind("<Enter>", func=lambda e: self.Apagar1.config(background="steelblue"))
+        self.Apagar1.bind("<Leave>", func=lambda e: self.Apagar1.config(background="mediumblue"))
 
-        self.Apagar = Button(self.Busca, text="Limpar", command=self.limpa2_tela, fg="white", bd=1, bg="mediumblue", highlightbackground="royalblue", highlightthickness=5, font=('verdanda', 10, 'bold'))
-        self.Apagar.place(relx=0.83, rely=0.85, relwidth=0.10, relheight=0.1)
-        self.Apagar.bind("<Enter>", func=lambda e: self.Apagar.config(background="steelblue"))
-        self.Apagar.bind("<Leave>", func=lambda e: self.Apagar.config(background="mediumblue"))
+        self.Apagar2 = Button(self.Busca, text="Limpar", command=self.limpa2_tela, fg="white", bd=1, bg="mediumblue", highlightbackground="royalblue", highlightthickness=5, font=('verdanda', 10, 'bold'))
+        self.Apagar2.place(relx=0.83, rely=0.85, relwidth=0.10, relheight=0.1)
+        self.Apagar2.bind("<Enter>", func=lambda e: self.Apagar2.config(background="steelblue"))
+        self.Apagar2.bind("<Leave>", func=lambda e: self.Apagar2.config(background="mediumblue"))
 
-        self.Apagar = Button(self.Exclusão, text="Limpar", command=self.limpa3_tela, fg="white", bd=1, bg="mediumblue", highlightbackground="royalblue", highlightthickness=5, font=('verdanda', 10, 'bold'))
-        self.Apagar.place(relx=0.83, rely=0.85, relwidth=0.10, relheight=0.1)
-        self.Apagar.bind("<Enter>", func=lambda e: self.Apagar.config(background="steelblue"))
-        self.Apagar.bind("<Leave>", func=lambda e: self.Apagar.config(background="mediumblue"))
+        self.Apagar3 = Button(self.Exclusão, text="Limpar", command=self.limpa3_tela, fg="white", bd=1, bg="mediumblue", highlightbackground="royalblue", highlightthickness=5, font=('verdanda', 10, 'bold'))
+        self.Apagar3.place(relx=0.83, rely=0.85, relwidth=0.10, relheight=0.1)
+        self.Apagar3.bind("<Enter>", func=lambda e: self.Apagar3.config(background="steelblue"))
+        self.Apagar3.bind("<Leave>", func=lambda e: self.Apagar3.config(background="mediumblue"))
+        
+        ###Botão OK
+        self.OK = Button(self.Cadastro, text="OK", command=self.Cidades, fg="white", bd=1, bg="mediumblue", highlightbackground="royalblue", highlightthickness=5, font=('verdanda', 10, 'bold'))
+        self.OK.place(relx=0.05, rely=0.71, relwidth=0.10, relheight=0.1)
+        self.OK.bind("<Enter>", func=lambda e: self.OK.config(background="steelblue"))
+        self.OK.bind("<Leave>", func=lambda e: self.OK.config(background="mediumblue"))
+
+        self.OK1 = Button(self.Alteração, text="OK", command=self.Cidades, fg="white", bd=1, bg="mediumblue", highlightbackground="royalblue", highlightthickness=5, font=('verdanda', 10, 'bold'))
+        self.OK1.place(relx=0.05, rely=0.71, relwidth=0.10, relheight=0.1)
+        self.OK1.bind("<Enter>", func=lambda e: self.OK1.config(background="steelblue"))
+        self.OK1.bind("<Leave>", func=lambda e: self.OK1.config(background="mediumblue"))
+
+        self.OK2 = Button(self.Busca, text="OK", command=self.Cidades, fg="white", bd=1, bg="mediumblue", highlightbackground="royalblue", highlightthickness=5, font=('verdanda', 10, 'bold'))
+        self.OK2.place(relx=0.05, rely=0.71, relwidth=0.10, relheight=0.1)
+        self.OK2.bind("<Enter>", func=lambda e: self.OK2.config(background="steelblue"))
+        self.OK2.bind("<Leave>", func=lambda e: self.OK2.config(background="mediumblue"))
     #Criacao de uma treview frame 2
     def treeview (self):
         ###Criando a treview...

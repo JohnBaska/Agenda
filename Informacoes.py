@@ -32,6 +32,5 @@ class Informacoes():
         j = 0
         for i in range(len(informacoes_tabela)):
             if i % 3 == 1:
-                cidade = informacoes_tabela[i].get_text()[0:len(informacoes_tabela[i].get_text()) - 1]
-                self.cidades.insert(j, cidade)
+                self.cidades.insert(j, informacoes_tabela[i].get_text())
                 j += 1
