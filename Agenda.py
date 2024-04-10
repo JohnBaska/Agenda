@@ -61,8 +61,32 @@ class Agenda(Relatorio, Informacoes):
         self.cidade = StringVar(self.Cadastro)
         self.cidade.set("CIDADE")
         
-        if self.estado.get() == "Minas Gerais":
+        if self.estado.get() == "Acre":
+            self.Cidades_AC()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Alagoas":
+            self.Cidades_AL()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Amapá":
+            self.Cidades_AP()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Amazonas":
+            self.Cidades_AM()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Bahia":
+            self.Cidades_BA()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Minas Gerais":
             self.Cidades_MG()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Rio de Janeiro":
+            self.Cidades_RJ()
             self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
             self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
         else:
@@ -74,37 +98,37 @@ class Agenda(Relatorio, Informacoes):
         self.cidade1.set("CIDADE")
         
 
-        if self.estado1.get() == "Minas Gerais":
+        if self.estado1.get() == "Acre":
+            self.Cidades_AC()
+            self.Cidade1_entry = OptionMenu(self.Alteração, self.cidade1, *self.cidades)
+            self.Cidade1_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Alagoas":
+            self.Cidades_AL()
+            self.Cidade1_entry = OptionMenu(self.Alteração, self.cidade1, *self.cidades)
+            self.Cidade1_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Amapá":
+            self.Cidades_AP()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade1, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Amazonas":
+            self.Cidades_AM()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade1, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Bahia":
+            self.Cidades_BA()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade1, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Minas Gerais":
             self.Cidades_MG()
+            self.Cidade1_entry = OptionMenu(self.Alteração, self.cidade1, *self.cidades)
+            self.Cidade1_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Rio de Janeiro":
+            self.Cidades_RJ()
             self.Cidade1_entry = OptionMenu(self.Alteração, self.cidade1, *self.cidades)
             self.Cidade1_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
         else:
             self.Cidade1_entry = OptionMenu(self.Alteração, self.cidade1, "                                           ")
             self.Cidade1_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
-            
-        Label(self.Busca, text="Cidade: ", bg="DodgerBlue", fg="indigo").place(relx=0.18, rely=0.53)
-        self.cidade2 = StringVar(self.Busca)
-        self.cidade2.set("CIDADE")
-
-        if self.estado2.get() == "Minas Gerais":
-            self.Cidades_MG()
-            self.Cidade2_entry = OptionMenu(self.Busca, self.cidade2, *self.cidades)
-            self.Cidade2_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
-        else:
-            self.Cidade2_entry = OptionMenu(self.Busca, self.cidade2, "                                            ")
-            self.Cidade2_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
-
-        Label(self.Exclusão, text="Cidade: ", bg="DodgerBlue", fg="indigo").place(relx=0.18, rely=0.53)
-        self.cidade3 = StringVar(self.Exclusão)
-        self.cidade3.set("CIDADE")
-        
-        if self.estado3.get() == "Minas Gerais":
-            self.Cidades_MG()
-            self.Cidade3_entry = OptionMenu(self.Exclusão, self.cidade3, *self.cidades)
-            self.Cidade3_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
-        else:
-            self.Cidade3_entry = OptionMenu(self.Exclusão, self.cidade3, "                                             ")
-            self.Cidade3_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
 
     def informacoes (self):
         ###Criação das abas
@@ -214,18 +238,6 @@ class Agenda(Relatorio, Informacoes):
         self.Estado_entry = OptionMenu(self.Alteração, self.estado, *self.estados)
         self.Estado_entry.place(relx=0.05, rely=0.61, relwidth=0.1, relheight=0.08)
 
-        Label(self.Busca, text="Estado: ", bg="DodgerBlue", fg="indigo").place(relx=0.05, rely=0.53)
-        self.estado2 = StringVar(self.Busca)
-        self.estado2.set("ESTADO")
-        self.Estado_entry = OptionMenu(self.Busca, self.estado, *self.estados)
-        self.Estado_entry.place(relx=0.05, rely=0.61, relwidth=0.1, relheight=0.08)
-
-        Label(self.Exclusão, text="Estado: ", bg="DodgerBlue", fg="indigo").place(relx=0.05, rely=0.53)
-        self.estado3 = StringVar(self.Exclusão)
-        self.estado3.set("ESTADO")
-        self.Estado_entry = OptionMenu(self.Exclusão, self.estado, *self.estados)
-        self.Estado_entry.place(relx=0.05, rely=0.61, relwidth=0.1, relheight=0.08)
-
         #cidade
         self.Cidades()
 
@@ -238,14 +250,6 @@ class Agenda(Relatorio, Informacoes):
         self.Bairro1_entry = Entry(self.Alteração, bg='#dfe3ee', fg='#107bd2', font=("Verdana", 13))
         self.Bairro1_entry.place(relx=0.46, rely=0.61, relwidth=0.21, relheight=0.08)
 
-        Label(self.Busca, text="Bairro: ", bg="DodgerBlue", fg="indigo").place(relx=0.46, rely=0.53)
-        self.Bairro2_entry = Entry(self.Busca, bg='#dfe3ee', fg='#107bd2', font=("Verdana", 13))
-        self.Bairro2_entry.place(relx=0.46, rely=0.61, relwidth=0.21, relheight=0.08)
-
-        Label(self.Exclusão, text="Bairro: ", bg="DodgerBlue", fg="indigo").place(relx=0.46, rely=0.53)
-        self.Bairro3_entry = Entry(self.Exclusão, bg='#dfe3ee', fg='#107bd2', font=("Verdana", 13))
-        self.Bairro3_entry.place(relx=0.46, rely=0.61, relwidth=0.21, relheight=0.08)
-
         #complemento
         Label(self.Cadastro, text="Complemento: ", bg="DodgerBlue", fg="indigo").place(relx=0.70, rely=0.53)
         self.Complemento_entry = Entry(self.Cadastro, bg='#dfe3ee', fg='#107bd2', font=("Verdana", 13))
@@ -254,14 +258,6 @@ class Agenda(Relatorio, Informacoes):
         Label(self.Alteração, text="Complemento: ", bg="DodgerBlue", fg="indigo").place(relx=0.70, rely=0.53)
         self.Complemento1_entry = Entry(self.Alteração, bg='#dfe3ee', fg='#107bd2', font=("Verdana", 13))
         self.Complemento1_entry.place(relx=0.70, rely=0.61, relwidth=0.25, relheight=0.08)
-
-        Label(self.Busca, text="Complemento: ", bg="DodgerBlue", fg="indigo").place(relx=0.70, rely=0.53)
-        self.Complemento2_entry = Entry(self.Busca, bg='#dfe3ee', fg='#107bd2', font=("Verdana", 13))
-        self.Complemento2_entry.place(relx=0.70, rely=0.61, relwidth=0.25, relheight=0.08)
-
-        Label(self.Exclusão, text="Complemento: ", bg="DodgerBlue", fg="indigo").place(relx=0.70, rely=0.53)
-        self.Complemento3_entry = Entry(self.Exclusão, bg='#dfe3ee', fg='#107bd2', font=("Verdana", 13))
-        self.Complemento3_entry.place(relx=0.70, rely=0.61, relwidth=0.25, relheight=0.08)
     #Criacao dos botoes
     def buttons (self):
         ###Botao Cadastrar
@@ -319,11 +315,6 @@ class Agenda(Relatorio, Informacoes):
         self.OK1.place(relx=0.05, rely=0.71, relwidth=0.10, relheight=0.1)
         self.OK1.bind("<Enter>", func=lambda e: self.OK1.config(background="steelblue"))
         self.OK1.bind("<Leave>", func=lambda e: self.OK1.config(background="mediumblue"))
-
-        self.OK2 = Button(self.Busca, text="OK", command=self.Cidades, fg="white", bd=1, bg="mediumblue", highlightbackground="royalblue", highlightthickness=5, font=('verdanda', 10, 'bold'))
-        self.OK2.place(relx=0.05, rely=0.71, relwidth=0.10, relheight=0.1)
-        self.OK2.bind("<Enter>", func=lambda e: self.OK2.config(background="steelblue"))
-        self.OK2.bind("<Leave>", func=lambda e: self.OK2.config(background="mediumblue"))
     #Criacao de uma treview frame 2
     def treeview (self):
         ###Criando a treview...
