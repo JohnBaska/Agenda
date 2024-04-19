@@ -61,6 +61,7 @@ class Agenda(Relatorio, Informacoes):
         self.cidade = StringVar(self.Cadastro)
         self.cidade.set("CIDADE")
         
+        #identifica as cidades do estado ecolhido e coloca elas no option menu de cidades
         if self.estado.get() == "Acre":
             self.Cidades_AC()
             self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
@@ -81,12 +82,88 @@ class Agenda(Relatorio, Informacoes):
             self.Cidades_BA()
             self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
             self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Ceará":
+            self.Cidades_CE()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Espírito Santo":
+            self.Cidades_ES()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Goiás":
+            self.Cidades_GO()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Maranhão":
+            self.Cidades_MA()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Mato Grosso":
+            self.Cidades_MT()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Mato Grosso do Sul":
+            self.Cidades_MS()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
         elif self.estado.get() == "Minas Gerais":
             self.Cidades_MG()
+            self.Cidade1_entry = OptionMenu(self.Cadastro, self.cidade1, *self.cidades)
+            self.Cidade1_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Pará":
+            self.Cidades_PA()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Paraíba":
+            self.Cidades_PB()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Paraná":
+            self.Cidades_PR()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Pernambuco":
+            self.Cidades_PE()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Piauí":
+            self.Cidades_PI()
             self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
             self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
         elif self.estado.get() == "Rio de Janeiro":
             self.Cidades_RJ()
+            self.Cidade1_entry = OptionMenu(self.Cadastro, self.cidade1, *self.cidades)
+            self.Cidade1_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Rio Grande do Norte":
+            self.Cidades_RN()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Rio Grande do Sul":
+            self.Cidades_RS()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Rondônia":
+            self.Cidades_RO()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Roraima":
+            self.Cidades_RR()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Santa Catarina":
+            self.Cidades_SC()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "São Paulo":
+            self.Cidades_SP()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Sergipe":
+            self.Cidades_SE()
+            self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado.get() == "Tocantins":
+            self.Cidades_TO()
             self.Cidade_entry = OptionMenu(self.Cadastro, self.cidade, *self.cidades)
             self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
         else:
@@ -97,7 +174,7 @@ class Agenda(Relatorio, Informacoes):
         self.cidade1 = StringVar(self.Alteração)
         self.cidade1.set("CIDADE")
         
-
+        #identifica as cidades do estado ecolhido e coloca elas no option menu de cidades
         if self.estado1.get() == "Acre":
             self.Cidades_AC()
             self.Cidade1_entry = OptionMenu(self.Alteração, self.cidade1, *self.cidades)
@@ -106,26 +183,98 @@ class Agenda(Relatorio, Informacoes):
             self.Cidades_AL()
             self.Cidade1_entry = OptionMenu(self.Alteração, self.cidade1, *self.cidades)
             self.Cidade1_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
-        elif self.estado.get() == "Amapá":
+        elif self.estado1.get() == "Amapá":
             self.Cidades_AP()
             self.Cidade_entry = OptionMenu(self.Alteração, self.cidade1, *self.cidades)
             self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
-        elif self.estado.get() == "Amazonas":
+        elif self.estado1.get() == "Amazonas":
             self.Cidades_AM()
             self.Cidade_entry = OptionMenu(self.Alteração, self.cidade1, *self.cidades)
             self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
-        elif self.estado.get() == "Bahia":
+        elif self.estado1.get() == "Bahia":
             self.Cidades_BA()
             self.Cidade_entry = OptionMenu(self.Alteração, self.cidade1, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Ceará":
+            self.Cidades_CE()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Espírito Santo":
+            self.Cidades_ES()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Goiás":
+            self.Cidades_GO()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Mato Grosso":
+            self.Cidades_MT()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Mato Grosso do Sul":
+            self.Cidades_MS()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade, *self.cidades)
             self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
         elif self.estado1.get() == "Minas Gerais":
             self.Cidades_MG()
             self.Cidade1_entry = OptionMenu(self.Alteração, self.cidade1, *self.cidades)
             self.Cidade1_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Pará":
+            self.Cidades_PA()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Paraíba":
+            self.Cidades_PB()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Paraná":
+            self.Cidades_PR()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Pernambuco":
+            self.Cidades_PE()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Piauí":
+            self.Cidades_PI()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
         elif self.estado1.get() == "Rio de Janeiro":
             self.Cidades_RJ()
             self.Cidade1_entry = OptionMenu(self.Alteração, self.cidade1, *self.cidades)
             self.Cidade1_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Rio Grande do Norte":
+            self.Cidades_RN()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Rio Grande do Sul":
+            self.Cidades_RS()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Rondônia":
+            self.Cidades_RO()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Roraima":
+            self.Cidades_RR()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Santa Catarina":
+            self.Cidades_SC()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "São Paulo":
+            self.Cidades_SP()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Sergipe":
+            self.Cidades_SE()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
+        elif self.estado1.get() == "Tocantis":
+            self.Cidades_TO()
+            self.Cidade_entry = OptionMenu(self.Alteração, self.cidade, *self.cidades)
+            self.Cidade_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)
         else:
             self.Cidade1_entry = OptionMenu(self.Alteração, self.cidade1, "                                           ")
             self.Cidade1_entry.place(relx=0.18, rely=0.61, relwidth=0.25, relheight=0.08)

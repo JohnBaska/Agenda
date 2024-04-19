@@ -156,32 +156,12 @@ class Funcoes():
 
         self.Nome2 = self.Nome2_entry.get()
         self.Cod2 = self.Cod2_entry.get()
-        self.Telefone2 = self.Telefone2_entry.get()
-        if self.estado2.get() == "ESTADO":
-           self.Estado2 = ""
-        else:
-            self.Estado2 = self.estado2.get()
-        if self.cidade2.get() == "CIDADE":
-           self.Cidade2 = ""
-        else:
-            self.Cidade2 = self.cidade2.get()          
-        self.Bairro2 = self.Bairro2_entry.get()        
-        self.Complemento2 = self.Complemento2_entry.get()        
+        self.Telefone2 = self.Telefone2_entry.get()        
         self.E_mail2 = self.E_mail2_entry.get()
 
         self.Nome3 = self.Nome3_entry.get()
         self.Cod3 = self.Cod3_entry.get()
-        self.Telefone3 = self.Telefone3_entry.get()
-        if self.estado3.get() == "ESTADO":
-           self.Estado3 = ""
-        else:
-            self.Estado3 = self.estado3.get()
-        if self.cidade3.get() == "CIDADE":
-           self.Cidade3 = ""
-        else:
-            self.Cidade3 = self.cidade3.get()        
-        self.Bairro3 = self.Bairro3_entry.get()        
-        self.Complemento3 = self.Complemento3_entry.get()        
+        self.Telefone3 = self.Telefone3_entry.get()      
         self.E_mail3 = self.E_mail3_entry.get()
 
     def pode_cod(self):
@@ -297,23 +277,24 @@ class Funcoes():
                 if c > 1:
                     if i[c] != "'":
                         if i[c] != ',':
-                            if i[c-1] != ',' and c != tam -1:    
-                                if var == 1:
-                                    nome = nome + i[c]
-                                elif var == 2:
-                                    cod = cod + i[c]    
-                                elif var == 3:
-                                    tel = tel + i[c]
-                                elif var == 4:
-                                    cid = cid + i[c]
-                                elif var == 5:
-                                    est = est + i[c]
-                                elif var == 6:
-                                    bai = bai + i[c]
-                                elif var == 7:
-                                    com = com + i[c]
-                                elif var == 8:
-                                    email = email + i[c]  
+                            if i[c-1] != ',' and c != tam -1:
+                                if i[c] != "\n":    
+                                    if var == 1:
+                                        nome = nome + i[c]
+                                    elif var == 2:
+                                        cod = cod + i[c]    
+                                    elif var == 3:
+                                        tel = tel + i[c]
+                                    elif var == 4:
+                                        cid = cid + i[c]
+                                    elif var == 5:
+                                        est = est + i[c]
+                                    elif var == 6:
+                                        bai = bai + i[c]
+                                    elif var == 7:
+                                        com = com + i[c]
+                                    elif var == 8:
+                                        email = email + i[c]  
                     elif i[c-2] == ",":
                         var += 1
 
