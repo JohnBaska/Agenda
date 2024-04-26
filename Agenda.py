@@ -427,6 +427,11 @@ class Agenda(Relatorio, Informacoes):
         self.Buscar.bind("<Enter>", func=lambda e: self.Buscar.config(background="steelblue"))
         self.Buscar.bind("<Leave>", func=lambda e: self.Buscar.config(background="mediumblue"))
 
+        self.Reiniciar_treeview = Button(self.Busca, text="Reiniciar", command=self.select_lista, fg="white", bd=1, bg="mediumblue", highlightbackground="royalblue", highlightthickness=5, font=('verdanda', 10, 'bold'))
+        self.Reiniciar_treeview.place(relx=0.17, rely=0.85, relwidth=0.10, relheight=0.1)
+        self.Reiniciar_treeview.bind("<Enter>", func=lambda e: self.Reiniciar_treeview.config(background="steelblue"))
+        self.Reiniciar_treeview.bind("<Leave>", func=lambda e: self.Reiniciar_treeview.config(background="mediumblue"))
+
         ###Botao Excluir
         self.Excluir = Button(self.Exclusão, text="Excluir",  command=self.exclui_cadastro, fg="white", bd=1, bg="mediumblue", highlightbackground="royalblue", highlightthickness=5, font=('verdanda', 10, 'bold'))
         self.Excluir.place(relx=0.05, rely=0.85, relwidth=0.10, relheight=0.1)

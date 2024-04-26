@@ -31,20 +31,12 @@ class Funcoes():
         self.Nome2_entry.delete(0, END)
         self.Cod2_entry.delete(0, END)
         self.Telefone2_entry.delete(0, END)
-        self.estado2.set("ESTADO")
-        self.cidade2.set("CIDADE")
-        self.Bairro2_entry.delete(0, END)
-        self.Complemento2_entry.delete(0, END)
         self.E_mail2_entry.delete(0, END)
 
         #Esvazia os campos de cadastro
         self.Nome3_entry.delete(0, END)
         self.Cod3_entry.delete(0, END)
         self.Telefone3_entry.delete(0, END)
-        self.estado3.set("ESTADO")
-        self.cidade3.set("CIDADE")
-        self.Bairro3_entry.delete(0, END)
-        self.Complemento3_entry.delete(0, END)
         self.E_mail3_entry.delete(0, END)
 
         Label(self.Exclusão, text="Coloque o codigo do cadastro para exclui-lo", bg="dodgerblue", fg="dodgerblue").place(relx=0.35, rely=0.01)
@@ -78,20 +70,12 @@ class Funcoes():
         self.Nome2_entry.delete(0, END)
         self.Cod2_entry.delete(0, END)
         self.Telefone2_entry.delete(0, END)
-        self.estado2.set("ESTADO")
-        self.cidade2.set("CIDADE")
-        self.Bairro2_entry.delete(0, END)
-        self.Complemento2_entry.delete(0, END)
         self.E_mail2_entry.delete(0, END)
     def limpa3_tela (self):
         #Esvazia os campos de cadastro
         self.Nome3_entry.delete(0, END)
         self.Cod3_entry.delete(0, END)
         self.Telefone3_entry.delete(0, END)
-        self.estado3.set("ESTADO")
-        self.cidade3.set("CIDADE")
-        self.Bairro3_entry.delete(0, END)
-        self.Complemento3_entry.delete(0, END)
         self.E_mail3_entry.delete(0, END)
 
         Label(self.Exclusão, text="Coloque o codigo do cadastro para exclui-lo", bg="dodgerblue", fg="dodgerblue").place(relx=0.35, rely=0.01)
@@ -177,6 +161,8 @@ class Funcoes():
             
             if cod == self.Cod:
                 return False
+            elif cod == self.Cod1:
+                return False
         
         return True      
     #Funcao para um novo cadastro
@@ -194,6 +180,7 @@ class Funcoes():
                 self.desconecta_bd()
                 self.select_lista()
                 self.limpa_tela()
+                Label(self.Cadastro, text="Código já cadastrado", bg="dodgerblue", fg="dodgerblue").place(relx=0.82, rely=0.01)
             else:
                 Label(self.Cadastro, text="Código já cadastrado", bg="dodgerblue", fg="red").place(relx=0.82, rely=0.01)
         else:
@@ -225,18 +212,6 @@ class Funcoes():
         elif self.Telefone2_entry.get() != "":
             ###Busca por Telefone
             lista = self.cursor.execute(f""" SELECT Cod, Nome, Telefone FROM {self.usuario} WHERE Telefone =  "{self.Telefone2}";""")
-        elif self.Estado2 != "":
-            ###Busca por Estado
-            lista = self.cursor.execute(f""" SELECT Cod, Nome, Telefone FROM {self.usuario} WHERE Estado = "{self.Estado2}";""")
-        elif self.Cidade2_entry.get() != "":
-            ###Busca por Cidade
-            lista = self.cursor.execute(f""" SELECT Cod, Nome, Telefone FROM {self.usuario} WHERE Cidade = "{self.Cidade2}";""")
-        elif self.Bairro2_entry.get() != "":
-            ###Busca por Bairro
-            lista = self.cursor.execute(f""" SELECT Cod, Nome, Telefone FROM {self.usuario} WHERE Bairro = "{self.Bairro2}";""")
-        elif self.Complemento2_entry.get() != "":
-            ###Busca por Complemento
-            lista = self.cursor.execute(f""" SELECT Cod, Nome, Telefone FROM {self.usuario} WHERE Complemento = "{self.Complemento2}";""")
         elif self.Nome2_entry.get() != "":
             ###Busca por Nome
             self.Nome2_entry.insert(END, '%')
@@ -250,7 +225,7 @@ class Funcoes():
         self.limpa_tela()
         self.desconecta_bd()
     def duplo_click(self, event):
-        self.limpa_tela()
+        self.limpa_telas()
         self.tabela_cadastrados.selection()
 
         for n in self.tabela_cadastrados.selection():
@@ -301,8 +276,14 @@ class Funcoes():
         self.Nome_entry.insert(END, nome)
         self.Cod_entry.insert(END, cod)
         self.Telefone_entry.insert(END, tel)
-        self.estado.set(cid)
-        self.cidade.set(est)
+        if (cid != ""):
+            self.estado.set(est)
+        else:
+            self.estado.set("ESTADO")
+        if (cid != ""):
+            self.cidade.set(cid)
+        else:
+            self.cidade.set("CIDADE")
         self.Bairro_entry.insert(END, bai)
         self.Complemento_entry.insert(END, com)
         self.E_mail_entry.insert(END, email)
@@ -310,8 +291,14 @@ class Funcoes():
         self.Nome1_entry.insert(END, nome)
         self.Cod1_entry.insert(END, cod)
         self.Telefone1_entry.insert(END, tel)
-        self.estado1.set(cid)
-        self.cidade1.set(est)
+        if (cid != ""):
+            self.estado.set(est)
+        else:
+            self.estado.set("ESTADO")
+        if (cid != ""):
+            self.cidade.set(cid)
+        else:
+            self.cidade.set("CIDADE")
         self.Bairro1_entry.insert(END, bai)
         self.Complemento1_entry.insert(END, com)
         self.E_mail1_entry.insert(END, email)
@@ -319,19 +306,11 @@ class Funcoes():
         self.Nome2_entry.insert(END, nome)
         self.Cod2_entry.insert(END, cod)
         self.Telefone2_entry.insert(END, tel)
-        self.estado2.set(cid)
-        self.cidade2.set(est)
-        self.Bairro2_entry.insert(END, bai)
-        self.Complemento2_entry.insert(END, com)
         self.E_mail2_entry.insert(END, email)
 
         self.Nome3_entry.insert(END, nome)
         self.Cod3_entry.insert(END, cod)
         self.Telefone3_entry.insert(END, tel)
-        self.estado3.set(cid)
-        self.cidade3.set(est)
-        self.Bairro3_entry.insert(END, bai)
-        self.Complemento3_entry.insert(END, com)
         self.E_mail3_entry.insert(END, email)
 
         self.desconecta_bd()
@@ -345,7 +324,7 @@ class Funcoes():
             Label(self.Exclusão, text="Coloque o codigo do cadastro para exclui-lo", bg="dodgerblue", fg="red").place(relx=0.35, rely=0.01)
         else:
             ###Busca por Codigo
-            self.cursor.execute(f"""DELETE FROM {self.usuario} WHERE Cod = ?""", (self.Cod))
+            self.cursor.execute(f"""DELETE FROM {self.usuario} WHERE Cod = '{self.Cod3}';""")
             self.conn.commit()
             self.limpa3_tela()
             self.select_lista()
@@ -354,8 +333,14 @@ class Funcoes():
     def altera_cadastro (self):
         self.variaveis()
         self.conecta_bd()
-        self.cursor.execute(f"""UPDATE {self.usuario} SET Nome = '{self.Nome1}', Telefone = '{self.Telefone1}', Estado = '{self.Estado1}', Cidade = '{self.Cidade1}', Bairro = '{self.Bairro1}', Complemento = '{self.Complemento1}', Email = '{self.E_mail1}' WHERE cod = '{self.Cod1}'""")
-        self.conn.commit()
-        self.desconecta_bd()
-        self.select_lista()
-        self.limpa1_tela()
+        var = self.pode_cod()
+        
+        if var == True:
+            self.cursor.execute(f"""UPDATE {self.usuario} SET Nome = '{self.Nome1}', Telefone = '{self.Telefone1}', Estado = '{self.Estado1}', Cidade = '{self.Cidade1}', Bairro = '{self.Bairro1}', Complemento = '{self.Complemento1}', Email = '{self.E_mail1}' WHERE cod = '{self.Cod1}'""")
+            self.conn.commit()
+            self.desconecta_bd()
+            self.select_lista()
+            self.limpa1_tela()
+            Label(self.Cadastro, text="Código já cadastrado", bg="dodgerblue", fg="dodgerblue").place(relx=0.82, rely=0.01)
+        else:
+            Label(self.Alteração, text="Código já cadastrado", bg="dodgerblue", fg="red").place(relx=0.82, rely=0.01)
