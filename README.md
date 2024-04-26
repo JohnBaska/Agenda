@@ -58,4 +58,23 @@ Para rodar esse projeto você precisa estar com o python baixado em seu computad
   + Cadastrar
     + Serve para armazenar no banco de dados e mostra na tabala logo abaixo o novo cadastro (OBS.: O código tem que ser único e esclusivo daquele cadastro)
   + Limpar
-    + Serve para limpar todos os campos da aba cadastrar 
+    + Serve para limpar todos os campos da aba cadastrar
+
+#### Aba Alterar
+Para Utilização dessa aba Você deverá fazer a escolha de um cadastro pré-feito na Lista que fica logo abaixo e dar um duplo click para preencher automáticamente todos os campos com o cadastro ao qual você deseja alterar algum dado
++ Campos de preenchimento:
+  + Nome - preenchimento obrigatório
+  + Código (Para melhor identificação) - preenchimento obrigatório
+  + E-mail
+  + Telefone
+  + Estado (Menu de opções)
+  + Cidade (Menu de opções que depende do Estado)
+  + Bairro
+  + Complemento
++ Botões
+  + OK
+    + Serve para quando o campo do Estado for preenchido o Menu de opções de cidades ser alimentado com as cidades do Estado escolhido
+  + Cadastrar
+    + Serve para armazenar no banco de dados e mostra na tabala logo abaixo o novo cadastro (OBS.: O código tem que ser único e esclusivo daquele cadastro)
+  + Limpar
+    + Serve para limpar todos os campos da aba cadastrar
