@@ -1,12 +1,12 @@
 # Agenda
 
-## Descrição do projeto
+## Project Description
 
-Esse projeto foi feito completamente em python com a bilblioteca tkinter. 
+This project was made completely in python with the tkinter library. 
 
-O projeto básicamente consiste em um tipo de agenda de contatos no qual a cada usuário novo cadastrado tem seu próprio banco de dados criado para armazenar seus contatos juntamente com uma treeview (para melhor visualização dos contatos cadastrados)
+The project basically consists of something similar to a phone book, that with each new user regitered a new datebase is created to save your contacts together with a treeview (for improve the designer)
 
-⚠️ ATENÇÃO - Projeto em processo de atualização
+<!--⚠️ ATENÇÃO - Projeto em processo de atualização-->
 
 ## Configurções prévias
 
