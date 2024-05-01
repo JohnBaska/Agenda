@@ -17,6 +17,10 @@ Para rodar esse projeto você precisa estar com o python baixado em seu computad
 ### Janela de login:
 
 #### Aba cadastro:
+<div>
+  <img src="Assets/Tela_Login_Cadastrar.png"/>
+</div>
+
 + Campos de preenchimento
   + Nome
   + Senha
@@ -25,9 +29,14 @@ Para rodar esse projeto você precisa estar com o python baixado em seu computad
     + Serve para fazer o cadastro do usuário no banco de dados
     + Reinicia os campos de preenchimento
 
+
 #### Aba logar:
+<div>
+  <img src="Assets/Tela_Login_Logar.png"/>
+</div>
+
 + Depois do usuário fazer o cadastro
-+ Caampos de preenchimento:
++ Campos de preenchimento:
   + Nome
   + Senha
 + Botões:
@@ -39,6 +48,7 @@ Para rodar esse projeto você precisa estar com o python baixado em seu computad
     + Senha incorreta 
       + Prompt de aviso: Cadastro não existe
       + Reinicia os campos de preenchimento
+
 
 ### Janela Principal
 
