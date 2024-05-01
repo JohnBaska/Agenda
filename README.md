@@ -8,47 +8,45 @@ The project basically consists of something similar to a phone book, that with e
 
 <!--⚠️ ATENÇÃO - Projeto em processo de atualização-->
 
-## Configurções prévias
+## Previous settings
 
-Para rodar esse projeto você precisa estar com o python baixado em seu computador
+For run this project you need to be with the python installed in your computer.
 
-## Explicação do projeto
+## Project explication
 
-### Janela de login:
+### Login window: 
 
-#### Aba cadastro:
+#### "Cadastrar" Tab:
 <div>
   <img src="Assets/Login_Cadastrar.png"/>
 </div>
 
-+ Campos de preenchimento
-  + Nome
-  + Senha
-+ Botões
-  + Cadastrar
-    + Serve para fazer o cadastro do usuário no banco de dados
-    + Reinicia os campos de preenchimento
++ Fields of filling:
+  + "Nome";
+  + "Senha";
++ Buttons:
+  + "Cadastrar"
+    + It made the new user registration in datebase;
+    + Reset the fields;
 
-
-#### Aba logar:
+#### "Logar" Tab:
 <div>
   <img src="Assets/Login_Logar.png"/>
 </div>
 
-+ Depois do usuário fazer o cadastro
-+ Campos de preenchimento:
-  + Nome
-  + Senha
-+ Botões:
-  + Logar
-    + O programa procura (no banco de dados) o usuário e confirma a senha
-    + Senha corrreta: 
-      + Prompt de aviso: Login feito co suucesso
-      + Criar um Banco de dados com o nome de usuário cadastrado para armazenar os cadastros feitos por aquele usuário
-    + Senha incorreta 
-      + Prompt de aviso: Cadastro não existe
-      + Reinicia os campos de preenchimento
-
++ After of the new user registration
++ Fields of filling:
+  + "Nome"
+  + "Senha"
++ Buttons:
+  + "Logar"
+    + The program search (in the datebase) the user and confirm password;
+    + Correct password: 
+      + Warning prompt: "Login feito com sucesso";
+      + It's created a datebase with user name registered. For to save the registers made by that user;
+    + Incorrect password: 
+      + Warning prompt: "Cadastro não existe";
+      + Reset fields;
 
 ### Janela Principal
 
