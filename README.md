@@ -18,7 +18,7 @@ Para rodar esse projeto você precisa estar com o python baixado em seu computad
 
 #### Aba cadastro:
 <div>
-  <img src="Assets/Tela_Login_Cadastrar.png"/>
+  <img src="Assets/Login_Cadastrar.png"/>
 </div>
 
 + Campos de preenchimento
@@ -32,7 +32,7 @@ Para rodar esse projeto você precisa estar com o python baixado em seu computad
 
 #### Aba logar:
 <div>
-  <img src="Assets/Tela_Login_Logar.png"/>
+  <img src="Assets/Login_Logar.png"/>
 </div>
 
 + Depois do usuário fazer o cadastro
@@ -53,6 +53,10 @@ Para rodar esse projeto você precisa estar com o python baixado em seu computad
 ### Janela Principal
 
 #### Aba Cadastrar:
+<div>
+  <img src="Assets/Agenda-de-Contatos_Cadastrar.png" width="80%"/>
+</div>
+
 + Campos de preenchimento:
   + Nome - preenchimento obrigatório
   + Código (Para melhor identificação) - preenchimento obrigatório
@@ -69,8 +73,13 @@ Para rodar esse projeto você precisa estar com o python baixado em seu computad
     + Serve para armazenar no banco de dados e mostra na tabala logo abaixo o novo cadastro (OBS.: O código tem que ser único e esclusivo daquele cadastro)
   + Limpar
     + Serve para limpar todos os campos da aba cadastrar
+  + 
 
 #### Aba Alterar
+<div>
+  <img src="Assets/Agenda-de-Contatos_Alterar.png" width="80%"/>
+</div>
+
 Para Utilização dessa aba Você deverá fazer a escolha de um cadastro pré-feito na Lista que fica logo abaixo e dar um duplo click para preencher automáticamente todos os campos com o cadastro ao qual você deseja alterar algum dado
 + Campos de preenchimento:
   + Nome
@@ -90,6 +99,10 @@ Para Utilização dessa aba Você deverá fazer a escolha de um cadastro pré-fe
     + Serve para limpar todos os campos da aba Alterar
 
 #### Aba Buscar
+<div>
+  <img src="Assets/Agenda-de-Contatos_Buscar.png" width="80%"/>
+</div>
+
 + Campos de preenchimento:
   + Nome 
   + Código (Para melhor identificação) 
@@ -104,6 +117,9 @@ Para Utilização dessa aba Você deverá fazer a escolha de um cadastro pré-fe
     + Serve para limpar todos os campos da aba Buscar
 
 #### Aba Excluir
+<div>
+  <img src="Assets/Agenda-de-Contatos_Excluir.png" width="80%"/>
+</div>
 
 + Campos de preenchimento:
   + Nome 
@@ -117,5 +133,8 @@ Para Utilização dessa aba Você deverá fazer a escolha de um cadastro pré-fe
     + Serve para limpar todos os campos da aba Buscar
 
 #### Tabela
+<div>
+  <img src="Assets/Agenda-de-Contatos_Lista.png" width="80%"/>
+</div>
 
 Pegar todos os cadastro, ordenar os nomes por ordem alfabetica e mostra todos os cadastros na tabela (semente Nome, Código e Telefone)
