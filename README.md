@@ -68,18 +68,17 @@ For run this project you need to be with the python installed in your computer.
   + "OK"
     + It fill the field "Cidade" it according to the state chosen by the user
   + "Cadastrar"
-    + Serve para armazenar no banco de dados e mostra na tabala logo abaixo o novo cadastro (OBS.: O código tem que ser único e esclusivo daquele cadastro)
-  + Limpar
-    + Serve para limpar todos os campos da aba cadastrar
-  + 
+    + It save to datebase and it show in the table below it the new register (Note: The "código" have that to be exclusivity for the new registrant)
+  + "Limpar"
+    + it clean all the fields on the "Cadastrar" tab. 
 
 #### Aba Alterar
 <div>
   <img src="Assets/Agenda-de-Contatos_Alterar.png" width="80%"/>
 </div>
 
-Para Utilização dessa aba Você deverá fazer a escolha de um cadastro pré-feito na Lista que fica logo abaixo e dar um duplo click para preencher automáticamente todos os campos com o cadastro ao qual você deseja alterar algum dado
-+ Campos de preenchimento:
+For use of this tab, you must to choose a registation already made in table that which is below and double click for automatically fill all fields with the data chosen register, that you want to change.
++ Fields filling:
   + Nome
   + Código (Para melhor identificação)
   + E-mail
