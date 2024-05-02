@@ -48,9 +48,9 @@ For run this project you need to be with the python installed in your computer.
       + Warning prompt: "Cadastro não existe";
       + Reset fields;
 
-### Janela Principal
+### Main Window
 
-#### Aba Cadastrar:
+#### "Cadastrar" tab:
 <div>
   <img src="Assets/Agenda-de-Contatos_Cadastrar.png" width="80%"/>
 </div>
@@ -72,66 +72,67 @@ For run this project you need to be with the python installed in your computer.
   + "Limpar"
     + it clean all the fields on the "Cadastrar" tab. 
 
-#### Aba Alterar
+#### "Alterar" tab
 <div>
-  <img src="Assets/Agenda-de-Contatos_Alterar.png" width="80%"/>
+  <img src="Assets/Agenda-de-CoPegar todos os cadastro, ordenar os nomes por ordem alfabetica e mostra todos os cadastros na tabela (semente Nome, Código e Telefone)ntatos_Alterar.png" width="80%"/>
 </div>
 
 For use of this tab, you must to choose a registation already made in table that which is below and double click for automatically fill all fields with the data chosen register, that you want to change.
-+ Fields filling:
-  + Nome
-  + Código (Para melhor identificação)
-  + E-mail
-  + Telefone
-  + Estado (Menu de opções)
-  + Cidade (Menu de opções que depende do Estado)
-  + Bairro
-  + Complemento
-+ Botões
-  + OK
-    + Serve para quando o campo do Estado for preenchido o Menu de opções de cidades ser alimentado com as cidades do Estado escolhido
-  + Alterar
-    + Serve para armazenar no banco de dados e mostra na tabala logo abaixo As alterações que você no cadastro (OBS.: O código tem que ser único e esclusivo daquele cadastro)
-  + Limpar
-    + Serve para limpar todos os campos da aba Alterar
 
-#### Aba Buscar
++ Fields of filling:
+  + "Nome" - mandatory filling
+  + "Código" (For it improves identification) - mandatory filling
+  + "E-mail"
+  + "Telefone"
+  + "Estado" (options main)
+  + "Cidade" (options main that depend on the Estado)
+  + "Bairro"
+  + "Complemento"
++ Buttons
+  + "OK"
+    + It fill the field "Cidade" it according to the state chosen by the user
+  + "Alterar"
+    + It saves the changes that you made in the chosen register inside the datebase (Note: The "código" have that to be xclusive of this register)
+  + "Limpar"
+    + It clean all the fields in the "Alterar" tab 
+
+#### "Buscar" tab
 <div>
   <img src="Assets/Agenda-de-Contatos_Buscar.png" width="80%"/>
 </div>
 
-+ Campos de preenchimento:
-  + Nome 
-  + Código (Para melhor identificação) 
-  + E-mail
-  + Telefone
-+ Botões
-  + Reiniciar
-    + Server para reiniciar a tabela abaixo apos uma busca
-  + Buscar
-    + Serve para buscar no banco de dados os cadastros que tem as informações preenchidas pelo usuário e mostra na tabela abaixo
-  + Limpar
-    + Serve para limpar todos os campos da aba Buscar
++ Fields of filling:
+  + "Nome" - mandatory filling
+  + "Código" (For it improves identification) - mandatory filling
+  + "E-mail"
+  + "Telefone"
++ Buttons
+  + "Reiniciar"
+    + It resets the table below, after a searchServer para reiniciar a tabela abaixo apos uma busca
+  + "Buscar"
+    + It searches the datebase for registters that have the informations provided by the user and it show in the tableServe para buscar no banco de dados os cadastros que tem as informações preenchidas pelo usuário e mostra na tabela abaixo
+  + "Limpar"
+    + It clean all the fields in the "Alterar" tab
 
-#### Aba Excluir
+#### "Excluir" tab
 <div>
   <img src="Assets/Agenda-de-Contatos_Excluir.png" width="80%"/>
 </div>
 
-+ Campos de preenchimento:
-  + Nome 
-  + Código (Para melhor identificação) 
-  + E-mail
-  + Telefone
-+ Botões
-  + Excluir
-    + Serve para buscar no banco de dados os cadastros que tem as informações preenchidas pelo usuário e mostra na tabela abaixo e se o campo Codigo estiver preenchido o cadastro é apagado
-  + Limpar
-    + Serve para limpar todos os campos da aba Buscar
++ Fields of filling:
+  + "Nome" - mandatory filling
+  + "Código" (For it improves identification) - mandatory filling
+  + "E-mail"
+  + "Telefone"
++ Buttons
+  + "Excluir"
+    + it searches the basedate for resgitters that have the informations provided by the user and if the field "codigo" is filled in, the register will be deleted from the datebase
+  + "Limpar"
+    + it clean all the fields in the "Excluir" tab
 
 #### Tabela
 <div>
   <img src="Assets/Agenda-de-Contatos_Lista.png" width="80%"/>
 </div>
 
-Pegar todos os cadastro, ordenar os nomes por ordem alfabetica e mostra todos os cadastros na tabela (semente Nome, Código e Telefone)
+It get all register, sort the names alphabetically and it show all the regitters in the table (only "Nome", "Código" and "Telefone")
