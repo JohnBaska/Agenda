@@ -55,19 +55,19 @@ For run this project you need to be with the python installed in your computer.
   <img src="Assets/Agenda-de-Contatos_Cadastrar.png" width="80%"/>
 </div>
 
-+ Campos de preenchimento:
-  + Nome - preenchimento obrigatório
-  + Código (Para melhor identificação) - preenchimento obrigatório
-  + E-mail
-  + Telefone
-  + Estado (Menu de opções)
-  + Cidade (Menu de opções que depende do Estado)
-  + Bairro
-  + Complemento
-+ Botões
-  + OK
-    + Serve para quando o campo do Estado for preenchido o Menu de opções de cidades ser alimentado com as cidades do Estado escolhido
-  + Cadastrar
++ Fields of filling:
+  + "Nome" - mandatory filling
+  + "Código" (For it improves identification) - mandatory filling
+  + "E-mail"
+  + "Telefone"
+  + "Estado" (options main)
+  + "Cidade" (options main that depend on the Estado)
+  + "Bairro"
+  + "Complemento"
++ Buttons
+  + "OK"
+    + It fill the field "Cidade" it according to the state chosen by the user
+  + "Cadastrar"
     + Serve para armazenar no banco de dados e mostra na tabala logo abaixo o novo cadastro (OBS.: O código tem que ser único e esclusivo daquele cadastro)
   + Limpar
     + Serve para limpar todos os campos da aba cadastrar
