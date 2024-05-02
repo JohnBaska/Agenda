@@ -74,7 +74,7 @@ For run this project you need to be with the python installed in your computer.
 
 #### "Alterar" tab
 <div>
-  <img src="Assets/Agenda-de-CoPegar todos os cadastro, ordenar os nomes por ordem alfabetica e mostra todos os cadastros na tabela (semente Nome, Código e Telefone)ntatos_Alterar.png" width="80%"/>
+  <img src="Assets/Agenda-de-Contatos_Alterar.png" width="80%"/>
 </div>
 
 For use of this tab, you must to choose a registation already made in table that which is below and double click for automatically fill all fields with the data chosen register, that you want to change.
